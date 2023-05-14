@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const xmr = new XMLHttpRequest()
+    xmr.open('GET', 'http://localhost:3000/api')
+    xmr.onreadystatechange = function () {
+      if (xmr.readyState === 4 && xmr.status === 200) {
+        console.log(xmr.responseText)
+      }
+    }
+    xmr.send()
+  </script>
+</body>
+</html>

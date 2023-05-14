@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  a
+  <iframe src="http://localhost:4000/c.html" frameborder="0" id="iframe" onload="Load()"></iframe>
+  <script>
+      var isShow = true
+    function Load(){
+    
+      let Iframe = document.getElementById('iframe')
+      console.log(isShow)
+      if(isShow){
+   
+        Iframe.src ='http://localhost:3000/b.html'
+        isShow = false
+      }else{
+        // Iframe.contentWindow.name
+        console.log(Iframe.contentWindow.name);
+      }
+
+      
+    }
+  </script>
+</body>
+</html>
