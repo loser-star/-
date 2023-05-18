@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./reaction.js"></script>
+    <script src="./autorun.js"></script>
+    <script src="./observer.js"></script>
+    <script src="./observable.js"></script>
+ 
+    <script  type="text/babel">
+      class Peron {
+        @observable name = "张三";
+        @observable age = 20;
+        @observable address = {
+          city: "北京",
+        };
+      }
+      let person = new Peron();
+      autorun(() => {
+        console.log("name:", person.name);
+      });
+      autorun(() => {
+        console.log("age:", person.age);
+      });
+      autorun(() => {
+        console.log("address:", person.address.city);
+      });
+      person.name = "李四";
+      person.age = 21;
+      person.address.city = "上海";
+    </script>
+  </body>
+</html>
