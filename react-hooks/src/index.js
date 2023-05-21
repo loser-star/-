@@ -60,16 +60,16 @@ function App(){
 // useEffect,useLayoutEffect的使用
 function Animation(){
   const red = React.useRef();
-  const green = React.useRef();
+  const green = useRef(null);
 
   useLayoutEffect(() => {
     green.current.style.transform = 'translate(500px)'
     green.current.style.transition = 'all 500ms'
-    console.log(green.current.style.width)
+    console.log(green.current)
   })
 
   useEffect(() => {
-    console.log(red.current.style.width)
+    // console.log(red.current.style.width)
     // red.current.style.transform = 'translate(500px)'
     // red.current.style.transition = 'all 500ms'
   })
