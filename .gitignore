@@ -2,3 +2,5 @@ node_modules
 跨域/jsonp/node_modules
 **/**/node_modules/
 **/node_modules/
+**/node_modules/**
+微前端/nest-admin

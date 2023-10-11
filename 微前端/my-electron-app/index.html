@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP -->
+    <title>你好!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <iframe src="http://localhost:5501"></iframe>
+    </div>
+  </body>
+</html>
